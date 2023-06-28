@@ -1,7 +1,7 @@
 # Wallet micro-service
 
 ## Main objective
-- Boilerplate Nest.js
+- Boilerplate Nest.js.
 - Create mongo db and integrate it with Prisma ORM
 - Create rest routes:
   - Assets(actives)
