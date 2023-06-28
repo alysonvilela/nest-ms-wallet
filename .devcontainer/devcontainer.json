@@ -4,55 +4,45 @@
 		"../docker-compose.yaml",
 		"docker-compose.yml"
 	],
+	"postCreateCommand": "sh .devcontainer/install-omz.sh",
 	"service": "app",
 	"workspaceFolder": "/home/node/app",
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {},
 		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
-			"plugins": "git git-flow F-Sy-H zsh-autosuggestions zsh-completions",
-			"omsPlugins": "https://github.com/z-shell/F-Sy-H https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-completions"
+			"plugins": "git git-flow F-Sy-H zsh-autosuggestions zsh-completions zsh-syntax-highlighting",
+			"omzPlugins": "https://github.com/z-shell/F-Sy-H https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-completions https://github.com/zsh-users/zsh-syntax-highlighting.git",
+			
 		},
 		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
 	},
 	"customizations": {
 		"vscode": {
 		  "extensions": [
-	"dbaeumer.vscode-eslint",
-	"esbenp.prettier-vscode",
-	 "mhutchie.git-graph",
-	 "eamodio.gitlens",
-	 "ms-azuretools.vscode-docker",
-	 "github.vscode-github-actions",
-	 "johnpapa.vscode-peacock",
-	 "kamikillerto.vscode-colorize",
-	 "WallabyJs.console-ninja",
-	 "ChakrounAnas.turbo-console-log",
-	 "Centuplex.quokka",
-	 "robertz.code-snapshot"
-	],
+			"dbaeumer.vscode-eslint",
+			"esbenp.prettier-vscode",
+			"eamodio.gitlens",
+			"github.vscode-github-actions",
+			"johnpapa.vscode-peacock",
+			"kamikillerto.vscode-colorize",
+			"ChakrounAnas.turbo-console-log",
+			"Centuplex.quokka",
+			"robertz.code-snapshot",
+			"WallabyJs.quokka-vscode",
+			// "WallabyJs.console-ninja"
+		],
 		  "settings": {
 			 "editor.tabSize": 4,
 			 "terminal.integrated.defaultProfile.linux": "zsh",
 			 "terminal.integrated.profiles.linux": {
+				"zsh": {
+					"path": "/usr/bin/zsh"
+				  },
 				"bash": {
 				  "path": "bash",
 				  "icon": "terminal-bash"
-				},
-				"zsh": {
-				  "path": "zsh"
-				},
-				"fish": {
-				  "path": "fish"
-				},
-				"tmux": {
-				  "path": "tmux",
-				  "icon": "terminal-tmux"
-				},
-				"pwsh": {
-				  "path": "pwsh",
-				  "icon": "terminal-powershell"
 				}
-			 }
+			}
 		  }
 		}
 	 }

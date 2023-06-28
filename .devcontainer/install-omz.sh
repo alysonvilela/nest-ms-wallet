@@ -13,6 +13,7 @@ cd .. && rm -rf fonts
 
 # oh-my-zsh & plugins
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
+
 zsh -c 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
 zsh -c 'git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting'
 cp ./.zshrc ~
@@ -23,12 +24,14 @@ cp ./.zshrc ~
 # save current zshrc
 mv ~/.zshrc ~/.zshrc.bak
 
-sudo sh -c "$(wget -O- https://raw.githubusercontent.com/deluan/zsh-in-docker/master/zsh-in-docker.sh)" -- \
-    -t agnoster
+sudo sh -c "$(wget -O- https://raw.githubusercontent.com/deluan/zsh-in-docker/master/zsh-in-docker.sh)"
 
 # remove newly created zshrc
 rm -f ~/.zshrc
 # restore saved zshrc
 mv ~/.zshrc.bak ~/.zshrc
-# update theme
-sed -i '/^ZSH_THEME/c\ZSH_THEME="agnoster"' ~/.zshrc 
+
+zsh -c 'git clone https://github.com/denysdovhan/spaceship-prompt.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt'
+zsh -c 'ln -sf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship.zsh-theme'
+# update theme'
+sed -i '/^ZSH_THEME/c\ZSH_THEME="spaceship"' ~/.zshrc 
