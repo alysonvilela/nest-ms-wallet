@@ -34,4 +34,5 @@ mv ~/.zshrc.bak ~/.zshrc
 zsh -c 'git clone https://github.com/denysdovhan/spaceship-prompt.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt'
 zsh -c 'ln -sf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship.zsh-theme'
 # update theme'
+
 sed -i '/^ZSH_THEME/c\ZSH_THEME="spaceship"' ~/.zshrc 
