@@ -17,3 +17,6 @@
 - Rest controlling
 - Kafka
 - Docker
+- VSCode devcontainer
+  - ZSH
+  - Oh-my-zsh themed with spaceship
