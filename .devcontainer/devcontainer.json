@@ -19,19 +19,21 @@
 	"customizations": {
 		"vscode": {
 		  "extensions": [
-			"dbaeumer.vscode-eslint",
-			"esbenp.prettier-vscode",
-			"eamodio.gitlens",
-			"github.vscode-github-actions",
-			"johnpapa.vscode-peacock",
-			"kamikillerto.vscode-colorize",
-			"ChakrounAnas.turbo-console-log",
-			"Centuplex.quokka",
-			"robertz.code-snapshot",
-			"WallabyJs.quokka-vscode",
+			// "dbaeumer.vscode-eslint",
+			// "esbenp.prettier-vscode",
+			// "eamodio.gitlens",
+			// "github.vscode-github-actions",
+			// "johnpapa.vscode-peacock",
+			// "kamikillerto.vscode-colorize",
+			// "ChakrounAnas.turbo-console-log",
+			// "Centuplex.quokka",
+			// "robertz.code-snapshot",
+			// "WallabyJs.quokka-vscode",
 			// "WallabyJs.console-ninja"
 		],
 		  "settings": {
+			"git.autofetch": false,
+			"git.autorefresh": true,
 			 "editor.tabSize": 4,
 			 "terminal.integrated.defaultProfile.linux": "zsh",
 			 "terminal.integrated.profiles.linux": {
